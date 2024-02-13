@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id crime_date
+id crime_solved
+id crime_title
+id crime_title_label
+id fragment_container
+layout activity_main
+layout fragment_crime_detail
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string crime_details_label
+string crime_solved_label
+string crime_title_hint
+string crime_title_label
+style Base.Theme.CriminalIntent
+style Theme.CriminalIntent
+xml backup_rules
+xml data_extraction_rules
