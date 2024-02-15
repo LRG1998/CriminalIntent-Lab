@@ -1,14 +1,18 @@
 [
     {
-        "merged": "/home/lrg/.gradle/daemon/8.2/com.example.criminalintent.app-mergeDebugResources-36:/layout/fragment_crime_detail.xml",
-        "source": "/home/lrg/.gradle/daemon/8.2/com.example.criminalintent.app-main-39:/layout/fragment_crime_detail.xml"
+        "merged": "com.example.criminalintent.app-mergeDebugResources-46:/layout/fragment_crime_list.xml",
+        "source": "com.example.criminalintent.app-main-49:/layout/fragment_crime_list.xml"
     },
     {
-        "merged": "com.example.criminalintent.app-mergeDebugResources-36:/layout/activity_main.xml",
-        "source": "com.example.criminalintent.app-main-39:/layout/activity_main.xml"
+        "merged": "com.example.criminalintent.app-mergeDebugResources-46:/layout/activity_main.xml",
+        "source": "com.example.criminalintent.app-main-49:/layout/activity_main.xml"
     },
     {
-        "merged": "/home/lrg/.gradle/daemon/8.2/com.example.criminalintent.app-mergeDebugResources-36:/layout/activity_main.xml",
-        "source": "/home/lrg/.gradle/daemon/8.2/com.example.criminalintent.app-main-39:/layout/activity_main.xml"
+        "merged": "com.example.criminalintent.app-mergeDebugResources-46:/layout/fragment_crime_detail.xml",
+        "source": "com.example.criminalintent.app-main-49:/layout/fragment_crime_detail.xml"
+    },
+    {
+        "merged": "com.example.criminalintent.app-mergeDebugResources-46:/layout/list_item_crime.xml",
+        "source": "com.example.criminalintent.app-main-49:/layout/list_item_crime.xml"
     }
 ]

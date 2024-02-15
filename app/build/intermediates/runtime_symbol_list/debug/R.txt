@@ -3153,6 +3153,7 @@ int id aligned 0x7f080048
 int id all 0x7f080049
 int id allStates 0x7f08004a
 int id always 0x7f08004b
+int id androidx_compose_ui_view_composition_context 0x7f0801f8
 int id animateToEnd 0x7f08004c
 int id animateToStart 0x7f08004d
 int id antiClockwise 0x7f08004e
@@ -3198,6 +3199,7 @@ int id clip_vertical 0x7f080075
 int id clockwise 0x7f080076
 int id closest 0x7f080077
 int id collapseActionView 0x7f080078
+int id compose_view_saveable_id_tag 0x7f0801f9
 int id compress 0x7f080079
 int id confirm_button 0x7f08007a
 int id constraint 0x7f08007b
@@ -3211,6 +3213,7 @@ int id cos 0x7f080082
 int id counterclockwise 0x7f080083
 int id cradle 0x7f080084
 int id crime_date 0x7f0801f1
+int id crime_recycler_view 0x7f0801f5
 int id crime_solved 0x7f0801f2
 int id crime_title 0x7f080085
 int id crime_title_label 0x7f0801f3
@@ -3291,6 +3294,7 @@ int id grouping 0x7f0800ce
 int id groups 0x7f0800cf
 int id header_title 0x7f0800d0
 int id hide_ime_id 0x7f0800d1
+int id hide_in_inspector_tag 0x7f0801fa
 int id hideable 0x7f0800d2
 int id home 0x7f0800d3
 int id homeAsUp 0x7f0800d4
@@ -3306,8 +3310,10 @@ int id immediateStop 0x7f0800dd
 int id included 0x7f0800de
 int id indeterminate 0x7f0800df
 int id info 0x7f0800e0
+int id inspection_slot_table_set 0x7f0801fb
 int id invisible 0x7f0800e1
 int id inward 0x7f0800e2
+int id is_pooling_container_tag 0x7f0801f6
 int id italic 0x7f0800e3
 int id item_touch_helper_previous_elevation 0x7f0800e4
 int id jumpToEnd 0x7f0800e5
@@ -3432,6 +3438,7 @@ int id pathRelative 0x7f08015b
 int id peekHeight 0x7f08015c
 int id percent 0x7f08015d
 int id pin 0x7f08015e
+int id pooling_container_listener_holder_tag 0x7f0801f7
 int id position 0x7f08015f
 int id postLayout 0x7f080160
 int id pressed 0x7f080161
@@ -3576,6 +3583,7 @@ int id withinBounds 0x7f0801eb
 int id wrap 0x7f0801ec
 int id wrap_content 0x7f0801ed
 int id wrap_content_constrained 0x7f0801ee
+int id wrapped_composition_tag 0x7f0801fc
 int id x_left 0x7f0801ef
 int id x_right 0x7f0801f0
 int integer abc_config_activityDefaultDur 0x7f090000
@@ -3710,8 +3718,10 @@ int layout design_navigation_menu_item 0x7f0b002a
 int layout design_text_input_end_icon 0x7f0b002b
 int layout design_text_input_start_icon 0x7f0b002c
 int layout fragment_crime_detail 0x7f0b006c
+int layout fragment_crime_list 0x7f0b006d
 int layout ime_base_split_test_activity 0x7f0b002d
 int layout ime_secondary_split_test_activity 0x7f0b002e
+int layout list_item_crime 0x7f0b006e
 int layout m3_alert_dialog 0x7f0b002f
 int layout m3_alert_dialog_actions 0x7f0b0030
 int layout m3_alert_dialog_title 0x7f0b0031
@@ -3823,10 +3833,13 @@ int string character_counter_content_description 0x7f0f002b
 int string character_counter_overflowed_content_description 0x7f0f002c
 int string character_counter_pattern 0x7f0f002d
 int string clear_text_end_icon_content_description 0x7f0f002e
+int string close_drawer 0x7f0f00ab
+int string close_sheet 0x7f0f00ac
 int string crime_details_label 0x7f0f002f
 int string crime_solved_label 0x7f0f0030
 int string crime_title_hint 0x7f0f0031
 int string crime_title_label 0x7f0f0032
+int string default_error_message 0x7f0f00ad
 int string error_a11y_label 0x7f0f0033
 int string error_icon_content_description 0x7f0f0034
 int string exposed_dropdown_menu_content_description 0x7f0f0035
@@ -3834,6 +3847,8 @@ int string fab_transformation_scrim_behavior 0x7f0f0036
 int string fab_transformation_sheet_behavior 0x7f0f0037
 int string hide_bottom_view_on_scroll_behavior 0x7f0f0038
 int string icon_content_description 0x7f0f0039
+int string in_progress 0x7f0f00ae
+int string indeterminate 0x7f0f00af
 int string item_view_role_description 0x7f0f003a
 int string m3_exceed_max_badge_text_suffix 0x7f0f003b
 int string m3_ref_typeface_brand_medium 0x7f0f003c
@@ -3935,6 +3950,10 @@ int string mtrl_switch_track_decoration_path 0x7f0f009b
 int string mtrl_switch_track_path 0x7f0f009c
 int string mtrl_timepicker_cancel 0x7f0f009d
 int string mtrl_timepicker_confirm 0x7f0f009e
+int string navigation_menu 0x7f0f00b0
+int string not_selected 0x7f0f00b1
+int string off 0x7f0f00b2
+int string on 0x7f0f00b3
 int string password_toggle_content_description 0x7f0f009f
 int string path_password_eye 0x7f0f00a0
 int string path_password_eye_mask_strike_through 0x7f0f00a1
@@ -3944,9 +3963,12 @@ int string search_menu_title 0x7f0f00a4
 int string searchbar_scrolling_view_behavior 0x7f0f00a5
 int string searchview_clear_text_content_description 0x7f0f00a6
 int string searchview_navigation_content_description 0x7f0f00a7
+int string selected 0x7f0f00b4
 int string side_sheet_accessibility_pane_title 0x7f0f00a8
 int string side_sheet_behavior 0x7f0f00a9
 int string status_bar_notification_info_overflow 0x7f0f00aa
+int string tab 0x7f0f00b5
+int string template_percent 0x7f0f00b6
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style Animation_AppCompat_Dialog 0x7f100002
@@ -4238,6 +4260,7 @@ int style Base_Widget_MaterialComponents_TextView 0x7f10011f
 int style CardView 0x7f100120
 int style CardView_Dark 0x7f100121
 int style CardView_Light 0x7f100122
+int style DialogWindowTheme 0x7f10045e
 int style MaterialAlertDialog_Material3 0x7f100123
 int style MaterialAlertDialog_Material3_Animation 0x7f100124
 int style MaterialAlertDialog_Material3_Body_Text 0x7f100125

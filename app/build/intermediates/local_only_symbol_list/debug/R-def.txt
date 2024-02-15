@@ -5,12 +5,15 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id crime_date
+id crime_recycler_view
 id crime_solved
 id crime_title
 id crime_title_label
 id fragment_container
 layout activity_main
 layout fragment_crime_detail
+layout fragment_crime_list
+layout list_item_crime
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
