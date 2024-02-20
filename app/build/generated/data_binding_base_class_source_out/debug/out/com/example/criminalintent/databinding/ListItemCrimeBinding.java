@@ -4,10 +4,11 @@ package com.example.criminalintent.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.criminalintent.R;
@@ -17,24 +18,33 @@ import java.lang.String;
 
 public final class ListItemCrimeBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final TextView crimeDate;
 
   @NonNull
+  public final ImageView crimeSolved;
+
+  @NonNull
   public final TextView crimeTitle;
 
-  private ListItemCrimeBinding(@NonNull LinearLayout rootView, @NonNull TextView crimeDate,
-      @NonNull TextView crimeTitle) {
+  @NonNull
+  public final ConstraintLayout linearLayout;
+
+  private ListItemCrimeBinding(@NonNull ConstraintLayout rootView, @NonNull TextView crimeDate,
+      @NonNull ImageView crimeSolved, @NonNull TextView crimeTitle,
+      @NonNull ConstraintLayout linearLayout) {
     this.rootView = rootView;
     this.crimeDate = crimeDate;
+    this.crimeSolved = crimeSolved;
     this.crimeTitle = crimeTitle;
+    this.linearLayout = linearLayout;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -65,13 +75,22 @@ public final class ListItemCrimeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.crime_solved;
+      ImageView crimeSolved = ViewBindings.findChildViewById(rootView, id);
+      if (crimeSolved == null) {
+        break missingId;
+      }
+
       id = R.id.crime_title;
       TextView crimeTitle = ViewBindings.findChildViewById(rootView, id);
       if (crimeTitle == null) {
         break missingId;
       }
 
-      return new ListItemCrimeBinding((LinearLayout) rootView, crimeDate, crimeTitle);
+      ConstraintLayout linearLayout = (ConstraintLayout) rootView;
+
+      return new ListItemCrimeBinding((ConstraintLayout) rootView, crimeDate, crimeSolved,
+          crimeTitle, linearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

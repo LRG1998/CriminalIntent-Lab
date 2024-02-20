@@ -4,12 +4,14 @@ color black
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_solved
 id crime_date
 id crime_recycler_view
 id crime_solved
 id crime_title
 id crime_title_label
 id fragment_container
+id linearLayout
 layout activity_main
 layout fragment_crime_detail
 layout fragment_crime_list

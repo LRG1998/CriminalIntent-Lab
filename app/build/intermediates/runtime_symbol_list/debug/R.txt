@@ -3002,6 +3002,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f070097
 int drawable ic_mtrl_chip_checked_circle 0x7f070098
 int drawable ic_mtrl_chip_close_circle 0x7f070099
 int drawable ic_search_black_24 0x7f07009a
+int drawable ic_solved 0x7f0700e6
 int drawable m3_avd_hide_password 0x7f07009b
 int drawable m3_avd_show_password 0x7f07009c
 int drawable m3_bottom_sheet_drag_handle 0x7f07009d
@@ -3326,6 +3327,7 @@ int id legacy 0x7f0800eb
 int id line1 0x7f0800ec
 int id line3 0x7f0800ed
 int id linear 0x7f0800ee
+int id linearLayout 0x7f0801fd
 int id listMode 0x7f0800ef
 int id list_item 0x7f0800f0
 int id m3_side_sheet 0x7f0800f1
