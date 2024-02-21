@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.criminalintent.app-mergeDebugResources-45:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.example.criminalintent.app-mergeDebugResources-49:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "/home/lrg/.gradle/caches/transforms-3/d46e5590eb5a3f5617e490126314e88b/transformed/ui-1.0.1/res/values-zh-rTW/values-zh-rTW.xml",
