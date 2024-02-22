@@ -4,11 +4,13 @@ import android.database.Cursor;
 import android.os.CancellationSignal;
 import androidx.annotation.NonNull;
 import androidx.room.CoroutinesRoom;
+import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.room.util.UUIDUtil;
+import androidx.sqlite.db.SupportSQLiteStatement;
 import com.example.criminalintent.Crime;
 import java.lang.Class;
 import java.lang.Exception;
@@ -22,6 +24,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.Callable;
+import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlinx.coroutines.flow.Flow;
 
@@ -29,10 +32,53 @@ import kotlinx.coroutines.flow.Flow;
 public final class CrimeDao_Impl implements CrimeDao {
   private final RoomDatabase __db;
 
+  private final EntityDeletionOrUpdateAdapter<Crime> __updateAdapterOfCrime;
+
   private final CrimeTypeConverters __crimeTypeConverters = new CrimeTypeConverters();
 
   public CrimeDao_Impl(@NonNull final RoomDatabase __db) {
     this.__db = __db;
+    this.__updateAdapterOfCrime = new EntityDeletionOrUpdateAdapter<Crime>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "UPDATE OR ABORT `Crime` SET `id` = ?,`title` = ?,`date` = ?,`isSolved` = ? WHERE `id` = ?";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          @NonNull final Crime entity) {
+        statement.bindBlob(1, UUIDUtil.convertUUIDToByte(entity.getId()));
+        if (entity.getTitle() == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.getTitle());
+        }
+        final long _tmp = __crimeTypeConverters.fromDate(entity.getDate());
+        statement.bindLong(3, _tmp);
+        final int _tmp_1 = entity.isSolved() ? 1 : 0;
+        statement.bindLong(4, _tmp_1);
+        statement.bindBlob(5, UUIDUtil.convertUUIDToByte(entity.getId()));
+      }
+    };
+  }
+
+  @Override
+  public Object updateCrime(final Crime crime, final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __updateAdapterOfCrime.handle(crime);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, $completion);
   }
 
   @Override
